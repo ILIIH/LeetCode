@@ -1,0 +1,14 @@
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\bin\Debug\net7.0\ZigzagConversion.exe
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\bin\Debug\net7.0\ZigzagConversion.deps.json
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\bin\Debug\net7.0\ZigzagConversion.runtimeconfig.json
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\bin\Debug\net7.0\ZigzagConversion.dll
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\bin\Debug\net7.0\ZigzagConversion.pdb
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.GeneratedMSBuildEditorConfig.editorconfig
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.AssemblyInfoInputs.cache
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.AssemblyInfo.cs
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.csproj.CoreCompileInputs.cache
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.dll
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\refint\ZigzagConversion.dll
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.pdb
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ZigzagConversion.genruntimeconfig.cache
+C:\ILLIA_BRANCHUK\Programming\C#\ZigzagConversion\ZigzagConversion\obj\Debug\net7.0\ref\ZigzagConversion.dll

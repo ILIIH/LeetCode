@@ -1,89 +1,115 @@
-﻿internal class Program
+﻿using System.Text;
+
+internal class Program
 {
-    static string[][] zigzag; 
+  
     private static void Main(string[] args)
     {
-        convert("hello my name is illia", 3);
+        string textToConverte = "Apalindromeisaword,phrase,number,orothersequenceofunitsthatcanbereadthesamewayineitherdirection,withgeneralallowancesforadjustmentstopunctuationandworddividers.";
+        int numberOfRows = 2;
+        convert(textToConverte, numberOfRows);
     }
 
     static string convert(string line, int numRows) 
     {
         string result = "";
         line = line.Replace(" ", "");
-        Console.WriteLine(line);
 
-        if (line.Length <= numRows) {
+        if (line.Length <= numRows || numRows == 1) {
             return line;
         }
+        string[][] zigzag = convertStringToZigZagArr(line, numRows);
+
+        showArr(zigzag);
+        Console.WriteLine(getResult(zigzag));
+        return result;
+    }
+
+    static string[][] convertStringToZigZagArr(string line, int numRows) {
+
         int sectionAmount = (line.Length + 2 * numRows - 2) / (2 * numRows - 1);
-        int arrLenght = numRows* sectionAmount;
+        int arrLenght = numRows * sectionAmount;
 
-        zigzag = new string[numRows][];
+        string[][] zigzag = new string[numRows][];
 
-        for (int k = 0; k < numRows; k++) {
+        for (int k = 0; k < numRows; k++)
+        {
             zigzag[k] = new string[arrLenght];
         }
-
-        bool reverse = false;
 
         int i = 0;
         int j = 0;
         int charIndex = 0;
 
-        for (int o = 0; o < sectionAmount; o++) {
-            if (!reverse)
+        while (j< arrLenght)
+        {
+            while (true)
             {
-                while (true)
+                if (i == numRows)
                 {
-                    if (i == numRows)
-                    {
-                        reverse = true;
-                        break;
-                    }
+                    i--;
+                    break;
+                }
 
-                    if (charIndex< line.Length)
-                    {
-                        zigzag[i][j] = line[charIndex].ToString();
-                    }
-                        
-                    
+                if (charIndex < line.Length)
+                {
+                    zigzag[i][j] = line[charIndex].ToString();
+
+                }
+                if (i < numRows)
+                {
                     i++;
                     charIndex++;
                 }
+
             }
-            else {
-                while (true)
+
+
+            while (true)
+            {
+         
+                i--;
+                j++;
+               
+                if (charIndex < line.Length)
                 {
-                    i--;
-                    j++;
+                    zigzag[i][j] = line[charIndex].ToString();
+                }
+
+                if (i == 0)
+                {
+                    break;
+                }
+                else
+                {
                     charIndex++;
-
-                    if (charIndex < line.Length)
-                    {
-                        zigzag[i][j] = line[charIndex].ToString();
-                    }
-                   
-                    if (i == 1)
-                    {
-                        reverse = false;
-                        break;
-                    }
-                    
-
                 }
             }
 
         }
-
-        showArr(zigzag);
-        return result;
+        return zigzag;
     }
 
+    static string getResult(string[][] arr)
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            for (int j = 0; j < arr[i].Length; j++)
+            {
+                if (arr[i][j]!= null) stringBuilder.Append(arr[i][j]);
+            }
+        }
+
+        return stringBuilder.ToString();
+    }
     static void showArr(string[][] arr) { 
 
         for(int i = 0;i < arr.Length;i++) {
             for (int j = 0; j < arr[i].Length; j++){
-                Console.Write(arr[i][j]+',');
+                if(arr[i][j] == null) Console.Write("-,");
+                else Console.Write(arr[i][j]+',');
             }
             Console.WriteLine();
         }
